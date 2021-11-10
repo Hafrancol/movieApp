@@ -1,7 +1,7 @@
 # MoviesApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.11.
-This project is building, you can check it out the project [MovieApp](https://stoic-colden-04660f.netlify.app/) hosting on [netlify](https://www.netlify.com/)
+This project is building, you can check it out the project [MovieApp](https://trusting-visvesvaraya-d26a4f.netlify.app/) hosting on [netlify](https://www.netlify.com/)
 
 
 
