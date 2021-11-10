@@ -1,1 +1,19 @@
-<p>slider-popular works!</p>
+<section class="carousel">
+	<h2 class="title">Populars movies</h2>
+	<div class="carousel-container">
+		
+		<div class="card-movie" *ngFor="let item of result">
+			<div class="card-image">
+				<img src="https://image.tmdb.org/t/p/w500{{item.poster_path}}" alt="Placeholder image">
+			</div>
+			<div class="container-text">
+				<h4 class="subtitle is-4 is-spaced">{{item.title}}</h4>
+			</div>
+		</div>
+	
+
+		
+
+		
+		</div>
+</section>

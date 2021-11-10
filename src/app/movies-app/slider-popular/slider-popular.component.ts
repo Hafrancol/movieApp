@@ -1,15 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ServiceService } from '../services/service.service';
+
+
+
+
+
+
 
 @Component({
   selector: 'app-slider-popular',
   templateUrl: './slider-popular.component.html',
   styleUrls: ['./slider-popular.component.scss']
 })
-export class SliderPopularComponent implements OnInit {
+export class SliderPopularComponent  {
+	
+	
 
-  constructor() { }
+  constructor(private serviceMovie:ServiceService) { }
 
-  ngOnInit(): void {
-  }
+		get result(){
+			return this.serviceMovie.popularMovies;
+		}
+  
 
 }

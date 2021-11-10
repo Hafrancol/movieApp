@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiceService } from '../services/service.service';
 
 @Component({
   selector: 'app-slider-trending',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SliderTrendingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private serviceMovie:ServiceService) { }
+
+	get result(){
+		return this.serviceMovie.trendingMovies;
+	}
 
   ngOnInit(): void {
   }
