@@ -1,0 +1,16 @@
+<section class="buscar-movies" *ngIf="movies.length>0;else noMovies">
+	<h1 class="title is-4">Movies that match: <strong>{{name}}</strong></h1>
+	<app-slider
+		title="{{name}}"
+		[movies]="movies"
+	></app-slider>
+
+
+</section>
+
+<ng-template #noMovies>
+	<div class="notFound">
+		<h2><strong>{{name}}</strong> not found</h2>
+	</div>
+</ng-template>
+

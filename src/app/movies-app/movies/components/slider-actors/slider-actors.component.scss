@@ -1,0 +1,69 @@
+.carousel{
+	margin-top: 40px;
+	h2{
+		text-align: center;
+	}
+}
+
+
+.carousel-container{
+	display: flex;
+	gap: 50px;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	overscroll-behavior-x: contain;
+	scroll-snap-type: x proximity;
+	width: 90%;
+	margin: 30px auto;
+	height: 420px;
+	align-items: center;
+	padding: 0px 15px 0 15px;
+
+	
+}
+
+
+
+
+.container-text{
+	text-align: center;
+}
+
+.card-movie{
+	position: relative;
+	scroll-snap-align: center;
+	min-width: 260px;
+	max-width: 350px;
+	height: 400px; 
+	box-shadow: -2px 1px 19px 3px rgb(106, 107, 107);
+	-webkit-box-shadow: -2px 1px 19px 3px rgb(106, 107, 107);
+	-moz-box-shadow: -2px 1px 19px 3px rgb(106, 107, 107);
+
+	border-radius: 20px;
+	padding: 20px;
+}
+
+.card-image{
+	margin-bottom: 10px;
+	img{
+		width: 100%;
+		height: 280px;
+		object-fit: cover;
+	}
+
+}
+
+.ver-mas{
+	position: absolute;
+	bottom: 15px;
+	left: calc(50% - 75px );
+	width: 150px;
+	height: 35px;
+	background-color: rgb(133, 154, 179);
+	border-radius: 3px;
+	border: 1px solid gray;
+	font-size: 18px;
+	text-decoration: none;
+	color: white;
+	text-align: center;
+}

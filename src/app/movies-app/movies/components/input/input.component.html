@@ -1,0 +1,16 @@
+<form >
+	<input 
+		class="input" 
+		type="text" 
+		placeholder="Search the movie ..."
+		name="input"
+		[(ngModel)]="termino"
+		
+	
+	
+	>
+	<button class=" button is-success"
+	[routerLink]="['buscar',termino]"
+		
+	>Search the movie</button>
+</form>

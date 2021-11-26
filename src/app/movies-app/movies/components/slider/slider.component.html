@@ -1,0 +1,28 @@
+<section class="carousel">
+	<h2 class="title">{{title}}</h2>
+	<div class="carousel-container">
+
+		<div class="card-movie" *ngFor="let movie of movies" >
+			<div class="card-image">
+				<img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="Placeholder image">
+			</div>
+			<div class="container-text">
+				<h4 class="subtitle is-4 is-spaced">{{movie.original_title}}</h4>
+			</div>
+		
+			<a 
+			class="ver-mas"
+			[routerLink]="[ '/vermas', movie.id]"
+			>Ver más</a>
+		</div>
+
+	
+	
+		
+	
+
+		
+
+		
+		</div>
+</section>

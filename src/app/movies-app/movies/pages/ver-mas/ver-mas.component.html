@@ -1,0 +1,110 @@
+<div *ngIf="movie; else loading" class="container-trailer">
+	<h1 class="title">{{movie.title}}</h1>
+
+	<div class="date-movie">
+		<h3>Movie</h3>
+		<h3>{{movie.release_date}}</h3>
+	</div>
+
+	<iframe class="trailer"	 
+	 [src]="safeURL" 
+	 title="YouTube video player" 
+	 frameborder="0" 
+	 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+	</iframe>
+
+	<div class="container-genres">
+		<span 
+			*ngFor="let genre of movie.genres"
+			class="genre"
+			>
+			{{genre.name}}
+		</span>
+	</div>
+
+	<div class="overview">
+		<p>{{movie.overview}}</p>
+	</div>
+
+	<div class="rating">
+		<i class="fas fa-star"></i>
+		<p>Rating: <strong>{{movie.vote_average}}</strong>/10</p>
+	</div>
+
+	<hr class="hr">
+
+	<div 
+		class="watch-provider"
+		*ngIf="providers.length>0; else nonProvider"
+		>
+			<h2>Watch providers in Colombia</h2>
+			<div class="providers">
+				<span 
+				*ngFor="let provider of providers"
+				class="provider"
+				>
+				{{provider.provider_name}}
+				</span>
+			</div>
+	</div>
+	<ng-template #nonProvider>
+		<div class="watch-provider">
+			<h2>Watch providers in Colombia</h2>
+			<div class="providers">
+				<span class="provider">Non provider</span>
+			</div>
+		</div>
+	</ng-template>
+
+	<hr class="hr">
+
+	<div class="production-companies">
+		<h2>Production Companies</h2>
+			<div class="companies">
+				<span *ngFor="let company of productionCompany"
+					class="company"
+				>{{company.name}}
+				
+				</span>
+			</div>
+
+	</div>
+	
+
+	<app-slider-actors 
+	title="Actors"
+	[actors]="actors"
+	>
+	</app-slider-actors>
+
+	<hr class="hr">
+
+	
+	
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ng-template #loading>
+	<div class="loading">
+		<p>Loading...</p>
+	</div>
+</ng-template>
+
+
+
+

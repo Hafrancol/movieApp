@@ -1,0 +1,15 @@
+<section class="carousel">
+	<h2 class="title">{{title}}</h2>
+	<div class="carousel-container">
+
+		<div class="card-movie" *ngFor="let actor of actors" >
+			<div class="card-image">
+				<img src="https://image.tmdb.org/t/p/w500{{actor.profile_path}}" alt="Placeholder image">
+			</div>
+			<div class="container-text">
+				<h4 class="subtitle is-4 is-spaced">{{actor.original_name}}</h4>
+			</div>
+		
+		</div>
+
+	

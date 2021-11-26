@@ -1,0 +1,96 @@
+@media screen and (min-width:"320px"){
+	header{
+		min-width: 322px;
+		width: 100%;
+
+	}
+	.logo{
+		width: 150px;
+		height: 100px;
+		padding: 0;
+	}
+
+	
+	.search-container{
+		min-width: 320px;
+		width: 95%;
+		height: inherit;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content:space-evenly;
+		margin: 0 auto;
+	
+	}
+	
+	.input{
+		min-width: 150px;
+		max-width: 70%;
+		
+	}
+	
+	
+
+	.flag{
+		width: 95%;
+		height: 2px;
+		margin: 20px auto;
+		background: #3A1C71;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	}
+	.button{
+		display: block;
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.text-container{
+		width: 90%;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+
+
+
+
+
+
+}
+
+
+
+
+
+@media screen and (min-width:"800px"){
+
+	.search-container{
+		flex-direction: row;
+	}
+	.logo{
+		width: 200px;
+		max-height: 100px;
+	}
+
+
+	.button{
+		display: block;
+		max-width: 60%;
+		margin: 0 auto;
+	}
+
+	.text-container{
+		width: 80%;
+		margin: 0 auto;
+
+		p{
+			width: 80%;
+			margin: 0 auto;
+		}
+
+	}
+}
+
+
+
