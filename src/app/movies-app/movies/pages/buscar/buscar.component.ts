@@ -28,7 +28,10 @@ export class BuscarComponent implements OnInit {
 				}),
 			)
 			.subscribe(
-				res=> this.movies = res.results,
+				res=> {
+					this.movies = res.results;
+					console.log(this.movies)
+				},
 				err=> console.log('este es',err)
 				
 				);

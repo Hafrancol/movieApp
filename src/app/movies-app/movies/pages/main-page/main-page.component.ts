@@ -30,14 +30,14 @@ export class MainPageComponent implements OnInit {
 		this.moviesService.fetchBuscar(movie)
 		.subscribe(
 			res=>{
-				this.Moviesrecomendations = res.results.splice(0,8);
+				this.Moviesrecomendations = res.results	;
 				if(res.results.length){
 					this.statusError = false;
-					console.log(this.statusError)
+					console.log(res)
 
 				}else{
 					this.statusError = true;
-					console.log(this.statusError)
+					console.log(res)
 				}
 			},
 			err=> {
