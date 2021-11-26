@@ -4,7 +4,24 @@
 <app-slider-trending></app-slider-trending> -->
 <section class="main-page">
 
-	<app-input></app-input>
+	<app-input
+		(onDebounce)="buscar($event)"
+	></app-input>
+
+	<ul contanainer-recomendation *ngIf="!statusError;else alertError">
+		<li 
+			*ngFor="let recomendation of Moviesrecomendations"
+			class="recomendation"
+			[routerLink]="[ '/vermas', recomendation.id ]"
+		>{{recomendation.original_title}}</li>
+	</ul>
+
+	<ng-template #alertError>
+		<div class="notFound" *ngIf="terminoBusqueda">
+			<h2><strong>{{terminoBusqueda}}</strong> not found</h2>
+		</div>
+	</ng-template>
+	
 	<app-grilla></app-grilla>
 	<app-slider 
 		[movies]="popularsMovies"
